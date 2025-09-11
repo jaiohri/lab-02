@@ -7,10 +7,81 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/headerText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3A8377"
+        android:text="@string/headerText"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/addCityButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/addCityButton"
+        android:textStyle="bold"
+        android:layout_margin="2dp"
+        app:layout_constraintTop_toBottomOf="@id/headerText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/deleteCityButton" />
+
+    <EditText
+        android:id="@+id/input_Field"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/inputField"
+        android:singleLine="true"
+        android:imeOptions="actionDone"
+        android:padding="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/confirm_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/confirm_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/confirm_button"
+        android:textStyle="bold"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        app:layout_constraintStart_toEndOf="@id/input_Field"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/deleteCityButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/deleteCityButton"
+        android:textStyle="bold"
+        android:layout_margin="2dp"
+        app:layout_constraintTop_toBottomOf="@id/headerText"
+        app:layout_constraintStart_toEndOf="@id/addCityButton"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
     <ListView
         android:id="@+id/city_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </ListView>
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/deleteCityButton"
+        app:layout_constraintBottom_toTopOf="@id/input_Field" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
