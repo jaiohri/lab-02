@@ -7,7 +7,7 @@
 
 ## References and Resources
 
-List any resources used here, or simply put `N/A` if not applicable.
+- Got the hide keyboard on submitting input functionality from "https://stackoverflow.com/"
 
 ## Verbal Collaboration
 
